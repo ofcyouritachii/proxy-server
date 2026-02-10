@@ -1,19 +1,117 @@
+/* Global Styles */
 body {
-    background: linear-gradient(135deg, #1a202c, #2d3748);
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-textarea, input, select {
+/* Input and Textarea Enhancements */
+textarea, 
+input[type="text"], 
+input[type="email"], 
+input[type="password"],
+select {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+textarea:focus, 
+input:focus, 
+select:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+}
+
+/* Button Animations */
+button {
     transition: all 0.3s ease;
-}
-
-textarea:focus, input:focus, select:focus {
-    transform: scale(1.02);
+    position: relative;
+    overflow: hidden;
 }
 
 button:hover {
-    transform: translateY(-1px);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(59, 130, 246, 0.4);
 }
 
+button:active {
+    transform: translateY(0);
+}
+
+/* Card Styling */
 .bg-gray-800 {
-    box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+    border: 1px solid rgba(59, 130, 246, 0.1);
+    transition: all 0.3s ease;
+}
+
+.bg-gray-800:hover {
+    border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+/* Success Response Styling */
+.bg-green-900 {
+    animation: slideIn 0.5s ease-out;
+}
+
+/* Error Response Styling */
+.bg-red-900 {
+    animation: slideIn 0.5s ease-out;
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Scrollbar Styling for Response */
+pre::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+}
+
+pre::-webkit-scrollbar-track {
+    background: rgba(59, 130, 246, 0.1);
+    border-radius: 10px;
+}
+
+pre::-webkit-scrollbar-thumb {
+    background: rgba(59, 130, 246, 0.5);
+    border-radius: 10px;
+}
+
+pre::-webkit-scrollbar-thumb:hover {
+    background: rgba(59, 130, 246, 0.8);
+}
+
+/* Status code badge */
+.status-code {
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    textarea, input, select {
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+}
+
+/* Link styling */
+a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    text-decoration: underline;
 }
