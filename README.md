@@ -1,4 +1,4 @@
-# YokAi Proxy Server
+#  Proxy Server
 
 A powerful web-based HTTP proxy server built with Flask. Send HTTP requests through a beautiful web interface with support for custom headers, request bodies, and Discord webhooks.
 

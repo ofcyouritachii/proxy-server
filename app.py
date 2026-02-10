@@ -74,7 +74,7 @@ def proxy():
                 embed.add_embed_field(name="Method", value=method, inline=True)
                 embed.add_embed_field(name="URL", value=url, inline=True)
                 embed.set_timestamp()
-                embed.set_footer(text="Made By YokAi")
+                embed.set_footer(text="Made By ofcyouritachi.")
                 webhook.add_embed(embed)
                 sleep(0.5)
                 webhook.execute()
@@ -114,7 +114,7 @@ def proxy():
             embed.add_embed_field(name="Response Body", value=f"```\n{response_body}\n```", inline=False)
             
             embed.set_timestamp()
-            embed.set_footer(text="Made By YokAi")
+            embed.set_footer(text="Made By ofcyouritachi.")
             
             webhook.add_embed(embed)
             webhook_response = webhook.execute()
